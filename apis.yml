@@ -1,7 +1,18 @@
 aid: elion-therapeutics
 name: Elion Therapeutics
-description: 'Elion Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Elion Therapeutics is a privately held, clinical-stage biotechnology company
+  developing treatments for life-threatening invasive fungal infections (IFIs). Formerly
+  known as Sfunga Therapeutics, the company was founded on the belief that mechanistic
+  insight into natural products enables targeted optimization of them. Its lead candidate,
+  SF001, is a next-generation polyene antifungal — a rationally designed analog of amphotericin
+  B intended to retain broad fungicidal activity while mitigating the systemic toxicity
+  that limits the parent molecule. SF001 received FDA Qualified Infectious Disease Product
+  (QIDP) and Fast Track designations in 2023 and has advanced from a first-in-human
+  single-ascending-dose study into multiple-ascending-dose evaluation. Elion closed an
+  $81 million Series B in June 2024 led by Deerfield Management and the AMR Action Fund,
+  with participation from Illinois Ventures. Elion is a therapeutics developer, not a
+  software vendor: it publishes no developer program, public API, or machine-readable
+  API contract, and this profile records that absence rather than any API surface.'
 url: https://raw.githubusercontent.com/api-evangelist/elion-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +23,14 @@ created: '2026-08-12'
 modified: '2026-08-12'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Therapeutics
+- Life Sciences
+- Anti-Infectives
+- Drug Development
+- Clinical Stage
+- Healthcare
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,34 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/elion-therapeutics-domain-security.yml
 - type: Website
+  url: https://eliontx.com/
+- type: Company
   url: https://forgeglobal.com/elion-therapeutics_stock/
+- type: LLMsTxt
+  url: llms/elion-therapeutics-llms.txt
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Elion Therapeutics is a clinical-stage antifungal drug developer whose only web
+    property is a WordPress marketing site — the origin answers HTTP 404 to every
+    /.well-known/ path and to /llms.txt, and there is no developer portal, GitHub
+    organization, or API of any kind to profile.
+  evidence:
+  - url: https://eliontx.com/.well-known/api-catalog
+    status: 404
+  - url: https://eliontx.com/llms.txt
+    status: 404
+  - url: https://eliontx.com/robots.txt
+    status: 200
+  - url: https://github.com/eliontx
+    status: 404
+  checked: '2026-08-12'

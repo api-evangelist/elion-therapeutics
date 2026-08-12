@@ -1,0 +1,108 @@
+generated: '2026-08-12'
+method: probed
+source: https://eliontx.com/
+note: >-
+  Recorded ABSENCE. Every /.well-known/ path and /llms.txt probed on the only host
+  Elion Therapeutics operates (eliontx.com) returned HTTP 404 from the origin
+  WordPress install. No document of any kind was served, so NO WellKnown or
+  SecurityTxt pointer is wired into apis.yml — this file documents that the surface
+  is not published, and must not be read as evidence that it is.
+host: eliontx.com
+hits: 0
+probes:
+- path: /.well-known/security.txt
+  url: https://eliontx.com/.well-known/security.txt
+  status: 404
+  content_type: text/html
+  file: null
+- path: /.well-known/openid-configuration
+  url: https://eliontx.com/.well-known/openid-configuration
+  status: 404
+  content_type: text/html; charset=UTF-8
+  file: null
+- path: /.well-known/oauth-authorization-server
+  url: https://eliontx.com/.well-known/oauth-authorization-server
+  status: 404
+  content_type: text/html; charset=UTF-8
+  file: null
+- path: /.well-known/oauth-protected-resource
+  url: https://eliontx.com/.well-known/oauth-protected-resource
+  status: 404
+  content_type: text/html; charset=UTF-8
+  file: null
+- path: /.well-known/api-catalog
+  url: https://eliontx.com/.well-known/api-catalog
+  status: 404
+  content_type: text/html; charset=UTF-8
+  file: null
+- path: /.well-known/ai-plugin.json
+  url: https://eliontx.com/.well-known/ai-plugin.json
+  status: 404
+  content_type: text/html; charset=UTF-8
+  file: null
+- path: /.well-known/agent-card.json
+  url: https://eliontx.com/.well-known/agent-card.json
+  status: 404
+  content_type: text/html; charset=UTF-8
+  file: null
+- path: /.well-known/agent.json
+  url: https://eliontx.com/.well-known/agent.json
+  status: 404
+  content_type: text/html; charset=UTF-8
+  file: null
+- path: /llms.txt
+  url: https://eliontx.com/llms.txt
+  status: 404
+  content_type: text/html
+  file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract hunt, run against the only known host. No OpenAPI, Swagger,
+    GraphQL SDL, MCP endpoint or A2A agent card was found. Paths that render HTML
+    are fronted by a Cloudflare interstitial that answers 403 to non-browser clients;
+    the /.well-known/ and /llms.txt paths reach the WordPress origin directly and
+    answer a genuine 404, which is the load-bearing negative evidence here.
+  probes:
+  - url: https://eliontx.com/openapi.json
+    status: 403
+    result: cloudflare-interstitial
+  - url: https://eliontx.com/openapi.yaml
+    status: 403
+    result: cloudflare-interstitial
+  - url: https://eliontx.com/swagger.json
+    status: 403
+    result: cloudflare-interstitial
+  - url: https://eliontx.com/v1/openapi.json
+    status: 403
+    result: cloudflare-interstitial
+  - url: https://eliontx.com/api-docs
+    status: 403
+    result: cloudflare-interstitial
+  - url: https://eliontx.com/docs
+    status: 403
+    result: cloudflare-interstitial
+  - url: https://eliontx.com/redoc
+    status: 403
+    result: cloudflare-interstitial
+  - url: https://eliontx.com/graphql
+    status: 403
+    result: cloudflare-interstitial
+  - url: https://eliontx.com/robots.txt
+    status: 200
+    result: >-
+      Served. WordPress default robots.txt (Disallow /wp-admin/). No sitemap or
+      developer path disclosed; confirms a WordPress marketing site, not an API host.
+  - url: https://github.com/eliontx
+    status: 404
+    result: no-github-organization
+  - url: https://github.com/elion-therapeutics
+    status: 404
+    result: no-github-organization
+  - url: https://github.com/eliontherapeutics
+    status: 404
+    result: no-github-organization
+  - url: https://eliontherapeutics.com/
+    status: 200
+    result: >-
+      Parked domain — serves a JavaScript redirect to /lander. Not operated as a
+      company site.

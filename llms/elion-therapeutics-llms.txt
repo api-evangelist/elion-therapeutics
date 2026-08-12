@@ -1,0 +1,54 @@
+# Elion Therapeutics
+
+> Clinical-stage biotechnology company developing next-generation polyene antifungals
+> for life-threatening invasive fungal infections. Formerly Sfunga Therapeutics.
+> Elion Therapeutics publishes no public API, no developer program, and no
+> machine-readable API contract.
+
+<!--
+generated: 2026-08-12
+method: generated
+source: apis.yml + probes recorded in well-known/elion-therapeutics-well-known.yml
+note: The provider does not serve /llms.txt (probed 2026-08-12, HTTP 404). This file is
+      an API Evangelist-generated profile summary, not a provider-published document.
+-->
+
+## About
+
+Elion Therapeutics is a privately held, clinical-stage biotechnology company working on
+treatments for invasive fungal infections (IFIs). Its lead candidate, SF001, is a
+rationally designed analog of amphotericin B intended to retain broad fungicidal
+activity while mitigating the systemic toxicity that limits the parent molecule. SF001
+received FDA Qualified Infectious Disease Product (QIDP) and Fast Track designations in
+2023 and has moved from a first-in-human single-ascending-dose study into
+multiple-ascending-dose evaluation. The company closed an $81 million Series B in June
+2024 led by Deerfield Management and the AMR Action Fund, with participation from
+Illinois Ventures.
+
+## API surface
+
+None. Elion Therapeutics is a therapeutics developer, not a software vendor.
+
+Note on terminology: "API" in this company's sector means *active pharmaceutical
+ingredient*, not application programming interface. Pharmaceutical directories that
+list Elion under "API" headings are not evidence of a software interface.
+
+As of 2026-08-12 the following were probed on the company's only operated host and
+returned no machine-readable contract:
+
+- No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, or Postman collection
+- No MCP server and no A2A agent card
+- No developer portal, API reference, SDKs, or public packages
+- No `/.well-known/` documents of any kind (all paths HTTP 404)
+- No GitHub organization
+
+## Links
+
+- Website: https://eliontx.com/
+- Secondary-market listing: https://forgeglobal.com/elion-therapeutics_stock/
+
+## Profile artifacts
+
+- apis.yml — https://raw.githubusercontent.com/api-evangelist/elion-therapeutics/refs/heads/main/apis.yml
+- security/elion-therapeutics-domain-security.yml — probed TLS/DNS posture
+- well-known/elion-therapeutics-well-known.yml — recorded absence of well-known documents
